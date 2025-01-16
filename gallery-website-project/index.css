@@ -84,17 +84,17 @@ main {
   width: 210px;
   height: 280px;
   object-fit: cover;
-  transition: transform 0.3s;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 
-#gallery-container .gallery-item:hover {
+.gallery-item:hover {
   transform: scale(1.1);
 }
 
 .gallery-item {
   position: relative;
+  transition: transform 0.3s;
 }
 
 .gallery-item i {
