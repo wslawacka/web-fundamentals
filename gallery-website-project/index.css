@@ -290,6 +290,9 @@ body {
   #home-container {
     padding-top: 100px;
   }
+  #modal {
+    height: 60vh;
+  }
 }
 
 @media (max-width: 500px) {
