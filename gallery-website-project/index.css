@@ -191,7 +191,7 @@ footer {
 }
 
 #tags-container > span.active {
-  background-color: rgb(108, 108, 110);
+  background-color: rgb(77, 77, 79);
   color: white;
 }
 
@@ -216,4 +216,64 @@ body {
   border: none;
   background-color: #e5e8ec;
   font-size: 14px;
+}
+
+#home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+#slider {
+  max-width: 20%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slide img {
+  height: 360px;
+  display: block;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+  margin-top: 14px;
+}
+
+.slider-controls button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e5e8ec;
+  transition: background-color 0.3s;
+}
+
+.slider-controls button:hover {
+  background-color: #b1b4b7;
+}
+
+.slider-controls button:active {
+  background-color: #8a8d90;
+}
+
+#home-container > h1 {
+  font-size: 30px;
 }
