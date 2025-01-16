@@ -85,6 +85,7 @@ main {
   height: 280px;
   object-fit: cover;
   transition: transform 0.3s;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 #gallery-container > img:hover {
@@ -128,7 +129,7 @@ footer {
   margin-top: 20px;
   text-align: center;
   font-size: 18px;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 0 10px rgba(0, 0, 0, 0.4);
 }
 
 #modal-back {
@@ -153,4 +154,29 @@ footer {
 
 #social-media-icons > i:hover {
   color: #4e6b8e;
+}
+
+#tags-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#tags-container > span {
+  cursor: pointer;
+  background-color: #e5e8ec;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#tags-container > span:hover {
+  background-color: #d5d8de;
+}
+
+#tags-container > span.active {
+  background-color: rgb(108, 108, 110);
+  color: white;
 }
