@@ -16,7 +16,7 @@ const winterTag = document.getElementById("winter-tag");
 const sunsetTag = document.getElementById("sunset-tag");
 const seaTag = document.getElementById("sea-tag");
 const mountainsTag = document.getElementById("mountains-tag");
-
+const favouritesTag = document.getElementById("favourites-tag");
 const allImages = document.querySelectorAll("#gallery-container .gallery-item");
 
 allTag.addEventListener("click", function() {
@@ -109,5 +109,27 @@ heartIcons.forEach(icon => {
   icon.addEventListener("click", function() {
     icon.classList.toggle("fa-regular");
     icon.classList.toggle("fa-solid");
+    const image = icon.closest(".gallery-item");
+    image.classList.toggle("favourite");
+
+    const activeTag = document.querySelector("#tags-container .active");
+    if (activeTag && activeTag.id === "favourites-tag" && !image.classList.contains("favourite")) {
+      image.style.display = "none";
+    }
+    
+  });
+});
+
+favouritesTag.addEventListener("click", function() {
+  allTags.forEach(tag => {
+    tag.classList.remove("active");
+  });
+  favouritesTag.classList.add("active");
+  allImages.forEach(image => {
+    if (image.classList.contains("favourite")) {
+      image.style.display = "block";
+    } else {
+      image.style.display = "none";
+    }
   });
 });
