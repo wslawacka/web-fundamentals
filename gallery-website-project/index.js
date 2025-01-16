@@ -8,6 +8,7 @@ galleryContainer.addEventListener("click", function(event) {
 });
 
 const allTags = document.querySelectorAll("#tags-container > span");
+const allTag = document.getElementById("all-tag");
 const summerTag = document.getElementById("summer-tag");
 const winterTag = document.getElementById("winter-tag");
 const sunsetTag = document.getElementById("sunset-tag");
@@ -15,6 +16,16 @@ const seaTag = document.getElementById("sea-tag");
 const mountainsTag = document.getElementById("mountains-tag");
 
 const allImages = document.querySelectorAll("#gallery-container img");
+
+allTag.addEventListener("click", function() {
+  allTags.forEach(tag => {
+    tag.classList.remove("active");
+  });
+  allTag.classList.add("active");
+  allImages.forEach(image => {
+    image.style.display = "block";
+  });
+});
 
 summerTag.addEventListener("click", function() {
   allTags.forEach(tag => {
