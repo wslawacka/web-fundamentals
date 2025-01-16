@@ -80,17 +80,30 @@ main {
   margin: 0 10px;
 }
 
-#gallery-container > img {
+#gallery-container img {
   width: 210px;
   height: 280px;
   object-fit: cover;
   transition: transform 0.3s;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
-#gallery-container > img:hover {
-  cursor: pointer;
+#gallery-container .gallery-item:hover {
   transform: scale(1.1);
+}
+
+.gallery-item {
+  position: relative;
+}
+
+.gallery-item i {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 24px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
 }
 
 #about-container {
@@ -117,7 +130,7 @@ footer {
   display: none;
   flex-direction: column;
   justify-content: center;
-  height: 80vh;
+  height: 70vh;
 }
 
 #modal-image {

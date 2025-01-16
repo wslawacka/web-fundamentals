@@ -1,10 +1,12 @@
 const galleryContainer = document.getElementById("gallery-container");
 
 galleryContainer.addEventListener("click", function(event) {
-  document.getElementById("modal").style.display = "flex";
-  document.getElementById("modal-image").src = event.target.src;
-  document.getElementById("modal-caption").textContent = event.target.alt;
-  document.getElementById("gallery-container").style.display = "none";
+  if(event.target.tagName === "IMG") {
+    document.getElementById("modal").style.display = "flex";
+    document.getElementById("modal-image").src = event.target.src;
+    document.getElementById("modal-caption").textContent = event.target.alt;
+    document.getElementById("gallery-container").style.display = "none";
+  }
 });
 
 const allTags = document.querySelectorAll("#tags-container > span");
@@ -15,7 +17,7 @@ const sunsetTag = document.getElementById("sunset-tag");
 const seaTag = document.getElementById("sea-tag");
 const mountainsTag = document.getElementById("mountains-tag");
 
-const allImages = document.querySelectorAll("#gallery-container img");
+const allImages = document.querySelectorAll("#gallery-container .gallery-item");
 
 allTag.addEventListener("click", function() {
   allTags.forEach(tag => {
@@ -98,5 +100,14 @@ mountainsTag.addEventListener("click", function() {
     } else {
       image.style.display = "none";
     }
+  });
+});
+
+const heartIcons = document.querySelectorAll(".gallery-item i");
+
+heartIcons.forEach(icon => {
+  icon.addEventListener("click", function() {
+    icon.classList.toggle("fa-regular");
+    icon.classList.toggle("fa-solid");
   });
 });
