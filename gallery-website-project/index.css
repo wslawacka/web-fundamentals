@@ -97,7 +97,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 130px;
+  padding-top: 100px;
 }
 
 footer {
@@ -110,6 +110,7 @@ footer {
   align-items: center;
   height: 50px;
   font-size: 16px;
+  color: black;
 }
 
 #modal {
@@ -179,4 +180,27 @@ footer {
 #tags-container > span.active {
   background-color: rgb(108, 108, 110);
   color: white;
+}
+
+body {
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.dark-mode {
+  background-color: #151414e0;
+  color: #e5e8ec;
+}
+
+.dark-mode #contact-text > a {
+  color: #88a6cf;
+}
+
+.toggle-dark-mode {
+  padding: 8px 14px;
+  border-radius: 4px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #e5e8ec;
+  font-size: 14px;
 }
